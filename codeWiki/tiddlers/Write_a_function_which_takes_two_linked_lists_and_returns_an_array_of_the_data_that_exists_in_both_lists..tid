@@ -1,0 +1,39 @@
+created: 20150910230430912
+modified: 20150910230616097
+title: Write a function which takes two linked lists and returns an array of the data that exists in both lists.
+type: text/vnd.tiddlywiki
+
+This one is from the [[daily plan|https://students.galvanize.com/cohorts/16/daily_plans/2015-09-10]] for 09/10/15:
+
+!! ''Challenge description'' — [[solutions|solutions to 09/10/15 daily plan challenge 1]]
+Write a function which takes two linked lists and returns an array of the data that exists in both lists. The following is implementation of `LinkedList` and `Node` that you may use and (sample) test cases:
+
+```js
+function LinkedList(head) {
+    this.head = head;
+  }
+
+  function Node(data, next) {
+    this.data = data;
+    this.next = next;
+  }
+
+  function commonDataBetweenLists(list1, list2) {
+    // your code here
+  }
+
+  var l1 = new LinkedList(new Node("This is the head"));
+  var foo = new Node('fooski');
+  var bar = new Node('barski');
+  l1.head.next = foo;
+  foo.next = bar;
+
+  var l2 = new LinkedList(new Node("something cool!"));
+  var goo = new Node('gooski');
+  var bar2 = new Node('barski');
+  l2.head.next = bar2;
+  bar2.next = goo;
+
+  console.log(commonDataBetweenLists(l1, l2));
+  // ['barski']
+```

@@ -1,0 +1,21 @@
+created: 20150910200429361
+modified: 20150910211320927
+tags: 
+title: $:/config/CodeMirror
+type: application/json
+
+{
+  "require": [
+      "$:/plugins/tiddlywiki/codemirror/mode/javascript/javascript.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/xml/xml.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/edit/matchbrackets.js"
+  ],
+  "configuration": {
+      "showCursorWhenSelecting": true,
+      "matchBrackets":true,
+      "autoCloseBrackets":true,
+	  "matchTags": {"bothTags": true},
+      "extraKeys": {"Ctrl-J": "toMatchingTag"},
+      "autoCloseTags":true
+  }
+}

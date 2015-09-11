@@ -1,0 +1,8 @@
+created: 20150910222822875
+modified: 20150910231510255
+title: Sample problems involving Linked Lists
+type: text/vnd.tiddlywiki
+
+* [[Write a function which takes two linked lists and returns an array of the data that exists in both lists.]]
+
+* [[Convert a sentence to a linked list.]]

@@ -1,0 +1,13 @@
+created: 20150910211606372
+modified: 20150910214118064
+tags: [[Linked List]] [[Interview Question]] Javascript
+title: linked list from sentence using indexed recursion with ternary
+type: application/javascript
+
+function sentenceToLinkedList(sentence){
+    var split = sentence.split(' ');
+    function go(split, index){
+      return split[index] ? new Node(split[index], go(split, index+1)) : null ;
+    }
+    return new LinkedList(new Node(split[0], go(split, 1)));
+  }

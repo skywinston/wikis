@@ -1,0 +1,24 @@
+created: 20150910214857593
+modified: 20150911150036996
+tags: [[Data Structures]] Javascript
+title: Linked Lists
+type: text/vnd.tiddlywiki
+
+!! What are linked lists?
+Linked Lists use Javascript objects as the components of this data structure. 
+
+Linked lists are composed of ''//nodes//''.
+
+Each linked list has a ''//head//''.  The head is a node with a single property, called //head//.  This head property has a value which is — quite simply — the //first// node object in the linked list.  This — and all other nodes — will have at least two canonical properties:
+
+# ''data'' — which contains information about that node.  This data property can hold any other type of data, but most of the examples we are using are simple strings.
+# ''next'' — this is set equal to another node object, also with `data` & `next` properties.
+
+!! Why use a linked list?
+Our instructors admit to not seeing Linked Lists used in the wild, at least not in Javascript.  Nonetheless, they remain a popular construct for interview questions.  
+
+Theoretically, linked lists are ideal for //quick insertions and deletions//.  
+
+Javascript does not have a linked list structure that's native to the language, but it is faily easy to implement this structure using constructor functions.  The link to sample problems on this page shows an example of those constructor functions for linked lists and nodes.
+
+!! [[Sample problems involving Linked Lists]]

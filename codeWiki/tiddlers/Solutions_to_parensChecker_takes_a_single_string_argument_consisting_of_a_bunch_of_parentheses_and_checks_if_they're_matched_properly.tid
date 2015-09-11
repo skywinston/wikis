@@ -1,0 +1,26 @@
+created: 20150911155956515
+modified: 20150911160017363
+title: Solutions to parensChecker takes a single string argument consisting of a bunch of parentheses and checks if they're matched properly
+type: text/vnd.tiddlywiki
+
+My Solution:
+
+```js
+function parensChecker(string){
+  var depth = 0;
+  for(var i = 0; i < string.length; i++){
+    if( string[i] === "(" ){
+      depth++;
+    } else if ( string[i] === ")" ){
+      depth--;
+    }
+    if ( depth < 0 ) return false;
+  }
+  return depth === 0 ? true : false;
+}
+console.log(parensChecker("()(((())))")); //→ true
+console.log(parensChecker("())))(")); //→ false
+console.log(parensChecker(")(")); //→ false
+console.log(parensChecker("()()((()))")); //→ true
+console.log(parensChecker("())()")); //→ false
+```

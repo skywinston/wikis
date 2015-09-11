@@ -1,0 +1,16 @@
+created: 20150911151510474
+modified: 20150911155941839
+title: parensChecker takes a single string argument consisting of a bunch of parentheses and checks if they're matched properly
+type: text/vnd.tiddlywiki
+
+Write a function `parensChecker` which takes a single string argument consisting of a bunch of parentheses. The function should return true if the string is a valid parentheses expression. For example:
+
+```js
+parensChecker("()(((())))") //=> true
+
+parensChecker("())))(") //=> false
+
+parensChecker(")(") //=> false
+```
+
+!!! [[Solutions|Solutions to parensChecker takes a single string argument consisting of a bunch of parentheses and checks if they're matched properly]]

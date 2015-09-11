@@ -1,0 +1,6 @@
+created: 20150911151348444
+modified: 20150911151450724
+title: Validations
+type: text/vnd.tiddlywiki
+
+[[parensChecker takes a single string argument consisting of a bunch of parentheses and checks if they're matched properly]]

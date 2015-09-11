@@ -1,0 +1,57 @@
+created: 20150910224934755
+modified: 20150910225911910
+title: solutions to 09/10/15 daily plan challenge 1
+type: text/vnd.tiddlywiki
+
+David Yoakam:
+
+```js
+function commonDataBetweenLists(list1, list2) {
+  var output = [];
+  
+  function go (list1Node, list2Node) {
+    if (!list1Node) return;
+
+    function goAgain (list1Node, list2Node) {
+      if (!list2Node) return;
+      if (list1Node.data == list2Node.data) {
+        output.push(list2Node.data);
+      }
+      return goAgain (list1Node, list2Node.next)
+    }
+
+    var list2Node = list2.head;
+    goAgain(list1Node, list2Node)
+    return go (list1Node.next, list2Node)
+  }
+
+  go(list1.head, list2.head)
+  return output;
+}
+
+console.log(commonDataBetweenLists(l1, l2));
+// ['barski’]
+```
+
+Andrew Varnell:
+
+```js
+function commonDataBetweenLists(list1, list2) {
+  var commonArray = [];
+  var nodeFirst = list1.head;
+  var nodeSecond = list2.head;
+
+  while(nodeFirst){
+      var dataToCheck = nodeFirst.data;
+      while(nodeSecond){
+          if(nodeSecond.data == dataToCheck){
+              commonArray.push(dataToCheck);
+          }
+          nodeSecond = nodeSecond.next;
+      }
+      nodeSecond = list2.head;
+      nodeFirst = nodeFirst.next;
+  }
+  return commonArray;
+}
+```

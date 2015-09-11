@@ -1,0 +1,62 @@
+created: 20150910231135744
+modified: 20150910231711542
+title: Solutions to sentenceToLinkedList
+type: text/vnd.tiddlywiki
+
+!!! Andrew Varnell:
+```js
+function toLinkedList(sentence){
+    var wordArray = sentence.split(' ');
+    var output = new LinkedList(new Node(wordArray.shift()));
+    var node = output.head;
+
+    wordArray.forEach(function(word){
+        word = new Node(word);
+        node.next = word;
+        node = word;
+    })
+    return output;
+}
+
+toLinkedList('This is a new List’)
+```
+
+!!! Andrew Mockett:
+```js
+function sentenceToLL(sentence){
+  var array = sentence.split(" ");
+  var linkedList = new LinkedList(new Node(array[0]));
+  var newArray = array.slice(1);
+  
+  function go(arr){
+    if (arr.length === 1){ return new Node(arr[0], null) };
+    return new Node(arr[0], go(arr.slice(1)));
+  }
+
+  linkedList.head.next = go(newArray);
+  return linkedList;
+}
+```
+''Refactored for brevity & clarity'':
+
+```js
+function sentenceToLL(sentence){
+  var array = sentence.split(" ");  
+  function go(arr){
+    if (arr.length === 1){ return new Node(arr[0], null) };
+    return new Node(arr[0], go(arr.slice(1)));
+  }
+  return new LinkedList(go(array));
+}
+```
+
+!!! Stephen Florian:
+```js
+function sentenceToLinkedList(sentence){
+	var split = sentence.split(' ');
+	function go(split, index){
+		return split[index] ? new Node(split[index], go(split, index+1)) : null ;
+	}
+	return new LinkedList(new Node(split[0], go(split, 1)));
+}
+```
